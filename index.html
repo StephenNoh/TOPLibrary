@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>The Odin Project's Library App</h1>
+    <div id="addBookForm">
+        <p>Add a Book:</p>
+        <form>
+            <div class="mb-3">
+            <label for="title" class="form-label">Book Title</label>
+            <input type="text" class="form-control" id="title" required>
+            </div>
+            <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author">
+            </div>
+            <div class="mb-3">
+                <label for="pages" class="form-label">Pages</label>
+                <input type="number" class="form-control" id="pages">
+            </div>
+            <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="read">
+            <label class="form-check-label" for="read">Read</label>
+            </div>
+            <button class="btn btn-primary" id="addBookButton">Add New Book</button>
+        </form>
+    </div>
+    <div id="books">
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>    
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
