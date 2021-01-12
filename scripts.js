@@ -1,23 +1,13 @@
 //event listeners
 const addBookButton = document.getElementById("addBookButton");
 addBookButton.addEventListener("click", addBookToLibrary);
+//remove a book
+document.querySelector("#book-list").addEventListener("click", (e) => e.target.parentElement.parentElement.remove())
 
-let myLibrary = [
-];
+//array of books in the library
+let myLibrary = [];
 
-//book constructor
-// class Book {
-//     constructor(title, author, pages, read="false") {
-//         this.title = title;
-//         this.author = author;
-//         this.pages = pages;
-//         this.read = read;
-//         this.info = function() {
-//             return (title + " by " + author + ", " + pages + " pages, " + (read ? "read" : "not yet read"))
-//           }
-//     }
-// }
-
+//constructor function for Book objects
 function Book(title, author, pages, read="false") {
   this.title = title
   this.author = author
@@ -27,7 +17,7 @@ function Book(title, author, pages, read="false") {
     return (title + " by " + author + ", " + pages + " pages, " + (read ? "read" : "not yet read"))
   }
 }
-
+//function used by event listener add books button
 function addBookToLibrary() {
     event.preventDefault();
     let title = document.getElementById("title").value 
